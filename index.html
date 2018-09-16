@@ -1,0 +1,36 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<script>
+
+$(document).ready(function () {
+    var tableContent = '';
+
+
+    $.get('hours.txt', function( data ) {
+
+      alert(data);
+      //this will split the string into array line by line
+      var lineByline = data.split('\n');
+        //here we're itraing the array which you've created and printing the values
+        $.each(lineByline , function(key,value){
+            tableContent += '<tr>';
+            tableContent += '<td>' + value + '</td>';
+            tableContent += '</tr>';
+        });
+
+        $('#taulu').html(tableContent);
+    });
+
+});
+
+</script>
+<body>
+<table id="taulu">
+
+
+
+</table>
+</body>
+</html>
