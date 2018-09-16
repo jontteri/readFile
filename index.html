@@ -6,11 +6,7 @@
 
 $(document).ready(function () {
     var tableContent = '';
-
-
     $.get('hours.txt', function( data ) {
-
-      alert(data);
       //this will split the string into array line by line
       var lineByline = data.split('\n');
         //here we're itraing the array which you've created and printing the values
@@ -22,18 +18,13 @@ $(document).ready(function () {
 			});			
             tableContent += '</tr>';
         });
-
         $('#taulu').html(tableContent);
     });
-
 });
 
 </script>
 <body>
 <table id="taulu">
-
-
-
 </table>
 </body>
 </html>
