@@ -22,7 +22,7 @@ $(document).ready(function () {
 		tableContent += '</tr>';
         $.each(lineByline , function(key,value){
             tableContent += '<tr>';
-			var dataOnLine = lineByline.split(';');
+			var dataOnLine = value.split(';');
 			$.each(dataOnLine , function(key,value){
 				tableContent += '<td>' + value + '</td>';
 			});			
