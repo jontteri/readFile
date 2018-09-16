@@ -14,12 +14,6 @@ $(document).ready(function () {
       //this will split the string into array line by line
       var lineByline = data.split('\n');
         //here we're itraing the array which you've created and printing the values
-		tableContent += '<tr>';
-		tableContent += '<td>Name</td>';
-		tableContent += '<td>XYZ</td>';
-		tableContent += '<td>ABC</td>';
-		tableContent += '<td>Total</td>';
-		tableContent += '</tr>';
         $.each(lineByline , function(key,value){
             tableContent += '<tr>';
 			var dataOnLine = value.split(';');
